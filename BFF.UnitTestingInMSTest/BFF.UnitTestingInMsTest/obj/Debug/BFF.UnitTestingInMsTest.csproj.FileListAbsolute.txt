@@ -1,0 +1,1 @@
+C:\_GIT\BFF-UnitTestingInMSTest\BFF.UnitTestingInMSTest\BFF.UnitTestingInMsTest\bin\Debug\BFF.UnitTestingInMsTest.exe.config
