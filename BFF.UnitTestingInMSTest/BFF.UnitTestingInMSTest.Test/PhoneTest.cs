@@ -18,14 +18,14 @@ namespace BFF.UnitTestingInMSTest.Test
         public void AlphanumericToPhoneNumber_HasValidPhoneWord_ReturnsAllNumbers()
         {
             // arrange
-            var expectedNumber = "1234";    //TODO
+            var expectedNumber = "18002257878";    //TODO
             var alphanumericPhone = "1-800-CAL-RTPT";   //TODO
 
             // act
             var result = TestPhone.AlphanumericToPhoneNumber(alphanumericPhone);
 
             // assert
-            //TODO
+            Assert.IsTrue(String.CompareOrdinal(expectedNumber, result) == 0);
         }
     }
 }

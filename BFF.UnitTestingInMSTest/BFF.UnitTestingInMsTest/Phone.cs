@@ -15,11 +15,43 @@ namespace BFF.UnitTestingInMsTest
             {
                 if ("ABC".Contains(character))
                 {
-                    result = string.Concat(result, "1");
+                    result = string.Concat(result, "2");
                 }
                 else if ("DEF".Contains(character))
                 {
-                    result = string.Concat(result, "2");
+                    result = string.Concat(result, "3");
+                }
+                else if ("GHI".Contains(character))
+                {
+                    result = string.Concat(result, "4");
+                }
+                else if ("JKL".Contains(character))
+                {
+                    result = string.Concat(result, "5");
+                }
+                else if ("MNO".Contains(character))
+                {
+                    result = string.Concat(result, "6");
+                }
+                else if ("PQRS".Contains(character))
+                {
+                    result = string.Concat(result, "7");
+                }
+                else if ("TUV".Contains(character))
+                {
+                    result = string.Concat(result, "8");
+                }
+                else if ("WXYZ".Contains(character))
+                {
+                    result = string.Concat(result, "9");
+                }
+                else if ("-()".Contains(character))
+                {
+                    // skip
+                }
+                else if ("1234567890".Contains(character))
+                {
+                    result = string.Concat(result, character);
                 }
             }
             return result;
