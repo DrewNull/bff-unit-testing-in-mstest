@@ -11,6 +11,7 @@ namespace BFF.UnitTestingInMsTest
         public string AlphanumericToPhoneNumber(string phoneword)
         {
             string result = string.Empty;
+
             foreach (var character in phoneword)
             {
                 if ("ABC".Contains(character))
