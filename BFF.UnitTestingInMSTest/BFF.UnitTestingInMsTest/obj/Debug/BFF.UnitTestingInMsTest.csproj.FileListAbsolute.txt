@@ -1,1 +1,6 @@
 C:\_GIT\BFF-UnitTestingInMSTest\BFF.UnitTestingInMSTest\BFF.UnitTestingInMsTest\bin\Debug\BFF.UnitTestingInMsTest.exe.config
+C:\_GIT\BFF-UnitTestingInMSTest\BFF.UnitTestingInMSTest\BFF.UnitTestingInMsTest\bin\Debug\BFF.UnitTestingInMsTest.exe
+C:\_GIT\BFF-UnitTestingInMSTest\BFF.UnitTestingInMSTest\BFF.UnitTestingInMsTest\bin\Debug\BFF.UnitTestingInMsTest.pdb
+C:\_GIT\BFF-UnitTestingInMSTest\BFF.UnitTestingInMSTest\BFF.UnitTestingInMsTest\obj\Debug\BFF.UnitTestingInMsTest.csprojResolveAssemblyReference.cache
+C:\_GIT\BFF-UnitTestingInMSTest\BFF.UnitTestingInMSTest\BFF.UnitTestingInMsTest\obj\Debug\BFF.UnitTestingInMsTest.exe
+C:\_GIT\BFF-UnitTestingInMSTest\BFF.UnitTestingInMSTest\BFF.UnitTestingInMsTest\obj\Debug\BFF.UnitTestingInMsTest.pdb
