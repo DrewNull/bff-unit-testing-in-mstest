@@ -8,12 +8,14 @@ namespace BFF.UnitTestingInMsTest
 {
     public class Phone
     {
-        public string AlphanumericToPhoneNumber(string phoneword)
+        public string VanityToPhoneNumber(string phoneword)
         {
             string result = string.Empty;
 
             foreach (var character in phoneword)
             {
+                if (result.Length >= 11) break;
+
                 if ("ABC".Contains(character))
                 {
                     result = string.Concat(result, "2");
