@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Contact.cs" />
     <Compile Include="Fakes\IOrderRepository.cs" />
     <Compile Include="Fakes\IOrderValidator.cs" />
     <Compile Include="Fakes\Order.cs" />
