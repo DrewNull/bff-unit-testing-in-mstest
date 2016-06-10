@@ -54,6 +54,7 @@
     <Compile Include="Fakes\OrderServiceTestsWithFakes.cs" />
     <Compile Include="Mocks\MockOrderRepository.cs" />
     <Compile Include="Mocks\OrderServiceTestsWithMocks.cs" />
+    <Compile Include="Mocks\StubOrderValidator.cs" />
     <Compile Include="PhoneTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Stubs\OrderServiceTestsWithStubs.cs" />

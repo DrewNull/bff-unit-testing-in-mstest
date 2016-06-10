@@ -8,19 +8,42 @@ namespace BFF.UnitTestingInMSTest.Test.Mocks
     public class OrderServiceTestsWithMocks
     {
         [TestMethod]
-        public void SubmitOrder_AnyOrder_CallsSaveOrder()
+        public void SubmitOrder_ValidOrder_CallsSaveOrder()
         {
             // arrange
             var mockRepository = new MockOrderRepository();
-            var service = new OrderService(mockRepository); 
-            var order = new Order();
-            order.Id = Guid.NewGuid();
+            var stubValidator = new StubOrderValidator(true);
+            var service = new OrderService(mockRepository, stubValidator);
+            var order = new Order
+            {
+                Id = Guid.NewGuid()
+            };
 
             // act
             service.SubmitOrder(order);
 
             // assert
-            Assert.AreEqual(mockRepository.SavedOrderId, order.Id);
+            Assert.IsNotNull(mockRepository.SavedOrder);
+            Assert.AreEqual(mockRepository.SavedOrder.Id, order.Id);
+        }
+
+        [TestMethod]
+        public void SubmitOrder_InvalidOrder_DoesNotCallSaveOrder()
+        {
+            // arrange
+            var mockRepository = new MockOrderRepository();
+            var stubValidator = new StubOrderValidator(false);
+            var service = new OrderService(mockRepository, stubValidator);
+            var order = new Order
+            {
+                Id = Guid.NewGuid()
+            };
+
+            // act
+            service.SubmitOrder(order);
+
+            // assert
+            Assert.IsNull(mockRepository.SavedOrder);
         }
     }
 }

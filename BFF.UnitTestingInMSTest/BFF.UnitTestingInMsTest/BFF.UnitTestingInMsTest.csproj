@@ -44,9 +44,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Fakes\IOrderRepository.cs" />
+    <Compile Include="Fakes\IOrderValidator.cs" />
     <Compile Include="Fakes\Order.cs" />
     <Compile Include="Fakes\OrderService.cs" />
     <Compile Include="Mocks\IOrderRepository.cs" />
+    <Compile Include="Mocks\IOrderValidator.cs" />
     <Compile Include="Mocks\Order.cs" />
     <Compile Include="Mocks\OrderService.cs" />
     <Compile Include="Phone.cs" />
