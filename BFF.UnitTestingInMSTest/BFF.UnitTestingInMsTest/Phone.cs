@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Linq;
 
 namespace BFF.UnitTestingInMsTest
 {
@@ -57,6 +53,18 @@ namespace BFF.UnitTestingInMsTest
                     result = string.Concat(result, character);
                 }
             }
+            return result;
+        }
+
+        public Contact AddPhoneToContact(string phoneNumber, Contact contact)
+        {
+            var result = contact;
+
+            var plainNumber = VanityToPhoneNumber(phoneNumber);
+
+            if (result.PhoneNumbers.All(x => x != plainNumber))
+                result.PhoneNumbers.Add(plainNumber);
+
             return result;
         }
     }

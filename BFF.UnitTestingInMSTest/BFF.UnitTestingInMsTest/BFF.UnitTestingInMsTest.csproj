@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Contact.cs" />
     <Compile Include="Mocks\IOrderRepository.cs" />
     <Compile Include="Mocks\Order.cs" />
     <Compile Include="Mocks\OrderService.cs" />
