@@ -4,7 +4,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace BFF.UnitTestingInMSTest.Test.Stubs
 {
     [TestClass]
-    public class OrderServiceTests
+    public class OrderServiceTestsWithStubs
     {
         [TestMethod]
         public void FindOrder_AnyOrderNumber_CallsGetOrderByNumber()

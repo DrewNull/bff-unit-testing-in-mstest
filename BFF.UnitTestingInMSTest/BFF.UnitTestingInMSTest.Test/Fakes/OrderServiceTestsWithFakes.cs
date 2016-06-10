@@ -5,11 +5,11 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace BFF.UnitTestingInMSTest.Test.Fakes
 {
     [TestClass]
-    public class OrderServiceTests
+    public class OrderServiceTestsWithFakes
     {
         private readonly FakeOrderRepository _repository;
 
-        public OrderServiceTests()
+        public OrderServiceTestsWithFakes()
         {
             this._repository = new FakeOrderRepository();
         }

@@ -5,7 +5,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace BFF.UnitTestingInMSTest.Test.Mocks
 {
     [TestClass]
-    public class OrderServiceTests
+    public class OrderServiceTestsWithMocks
     {
         [TestMethod]
         public void SubmitOrder_AnyOrder_CallsSaveOrder()
