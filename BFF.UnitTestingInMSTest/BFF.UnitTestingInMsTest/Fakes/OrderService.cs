@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace BFF.UnitTestingInMsTest.Fakes
+﻿namespace BFF.UnitTestingInMsTest.Fakes
 {
     public class OrderService
     {
@@ -11,13 +9,17 @@ namespace BFF.UnitTestingInMsTest.Fakes
             this._repository = repository;
         }
 
-        public Order GetOrder(Guid orderId)
+        public Order FindOrder(string orderNumber)
         {
-            return this._repository.GetOrder(orderId);
+            // do some other stuff
+
+            return this._repository.GetOrderByNumber(orderNumber);
         }
 
-        public void SaveOrder(Order order)
+        public void SubmitOrder(Order order)
         {
+            // do some other stuff
+
             this._repository.SaveOrder(order);
         }
     }

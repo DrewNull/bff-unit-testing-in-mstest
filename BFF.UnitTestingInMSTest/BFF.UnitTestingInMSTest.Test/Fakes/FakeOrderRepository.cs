@@ -7,11 +7,11 @@ namespace BFF.UnitTestingInMSTest.Test.Fakes
     {
         public Guid SavedOrderId { get; private set; }
 
-        public Order GetOrder(Guid id)
+        public Order GetOrderByNumber(string orderNumber)
         {
             var order = new Order
             {
-                Id = id
+                OrderNumber = orderNumber
             };
 
             return order;

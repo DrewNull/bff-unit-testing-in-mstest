@@ -15,21 +15,21 @@ namespace BFF.UnitTestingInMSTest.Test.Fakes
         }
 
         [TestMethod]
-        public void GetOrder_AnyOrder_GetFromRepository()
+        public void FindOrder_AnyOrderNumber_CallsGetOrderByNumber()
         {
             // arrange
             var service = new OrderService(this._repository);
-            var orderId = Guid.NewGuid();
+            var orderNumber = "123456789";
 
             // act
-            var order = service.GetOrder(orderId);
+            var order = service.FindOrder(orderNumber);
 
             // assert
-            Assert.AreEqual(order.Id, orderId);
+            Assert.AreEqual(order.OrderNumber, orderNumber);
         }
 
         [TestMethod]
-        public void SaveOrder_AnyOrder_SavesToRepository()
+        public void SubmitOrder_AnyOrder_CallsSaveOrder()
         {
             // arrange
             var service = new OrderService(this._repository);
@@ -37,7 +37,7 @@ namespace BFF.UnitTestingInMSTest.Test.Fakes
             order.Id = Guid.NewGuid();
 
             // act
-            service.SaveOrder(order);
+            service.SubmitOrder(order);
 
             // assert
             Assert.AreEqual(this._repository.SavedOrderId, order.Id);

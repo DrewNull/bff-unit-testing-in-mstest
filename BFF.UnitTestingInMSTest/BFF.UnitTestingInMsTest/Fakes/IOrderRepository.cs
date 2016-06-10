@@ -1,10 +1,8 @@
-﻿using System;
-
-namespace BFF.UnitTestingInMsTest.Fakes
+﻿namespace BFF.UnitTestingInMsTest.Fakes
 {
     public interface IOrderRepository
     {
-        Order GetOrder(Guid id);
+        Order GetOrderByNumber(string orderNumber);
 
         void SaveOrder(Order order);
     }

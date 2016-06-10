@@ -1,5 +1,4 @@
-﻿using System;
-using BFF.UnitTestingInMsTest.Stubs;
+﻿using BFF.UnitTestingInMsTest.Stubs;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace BFF.UnitTestingInMSTest.Test.Stubs
@@ -8,18 +7,18 @@ namespace BFF.UnitTestingInMSTest.Test.Stubs
     public class OrderServiceTests
     {
         [TestMethod]
-        public void GetOrder_AnyOrder_GetFromRepository()
+        public void FindOrder_AnyOrderNumber_CallsGetOrderByNumber()
         {
             // arrange
             var stubRepository = new StubOrderRepository();
             var service = new OrderService(stubRepository);
-            var orderId = Guid.NewGuid();
+            var orderNumber = "123456789";
 
             // act
-            var order = service.GetOrder(orderId);
+            var order = service.FindOrder(orderNumber);
 
             // assert
-            Assert.AreEqual(order.Id, orderId);
+            Assert.AreEqual(order.OrderNumber, orderNumber);
         }
     }
 }
