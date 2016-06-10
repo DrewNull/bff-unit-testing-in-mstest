@@ -8,7 +8,7 @@ namespace BFF.UnitTestingInMSTest.Test.Stubs
     public class OrderServiceTests
     {
         [TestMethod]
-        public void GetOrder_AnyOrder_GetsFromRepository()
+        public void GetOrder_AnyOrder_GetFromRepository()
         {
             // arrange
             var stubRepository = new StubOrderRepository();
