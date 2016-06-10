@@ -5,10 +5,10 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace BFF.UnitTestingInMSTest.Test.Mocks
 {
     [TestClass]
-    public class OrderServiceTests
+    public class OrderServiceTestsWithMocks
     {
         [TestMethod]
-        public void SaveOrder_AnyOrder_SavesToRepository()
+        public void SubmitOrder_AnyOrder_CallsSaveOrder()
         {
             // arrange
             var mockRepository = new MockOrderRepository();
@@ -17,7 +17,7 @@ namespace BFF.UnitTestingInMSTest.Test.Mocks
             order.Id = Guid.NewGuid();
 
             // act
-            service.SaveOrder(order);
+            service.SubmitOrder(order);
 
             // assert
             Assert.AreEqual(mockRepository.SavedOrderId, order.Id);

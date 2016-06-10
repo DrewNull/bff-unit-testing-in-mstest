@@ -1,15 +1,14 @@
-﻿using System;
-using BFF.UnitTestingInMsTest.Stubs;
+﻿using BFF.UnitTestingInMsTest.Stubs;
 
 namespace BFF.UnitTestingInMSTest.Test.Stubs
 {
     public class StubOrderRepository : IOrderRepository
     {
-        public Order GetOrder(Guid id)
+        public Order GetOrderByNumber(string orderNumber)
         {
             var order = new Order
             {
-                Id = id
+                OrderNumber = orderNumber
             };
 
             return order;

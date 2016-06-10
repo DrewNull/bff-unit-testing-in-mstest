@@ -1,4 +1,4 @@
-﻿namespace BFF.UnitTestingInMsTest.Stubs
+﻿namespace BFF.UnitTestingInMsTest.Fakes
 {
     public class OrderService
     {
@@ -14,6 +14,13 @@
             // do some other stuff
 
             return this._repository.GetOrderByNumber(orderNumber);
+        }
+
+        public void SubmitOrder(Order order)
+        {
+            // do some other stuff
+
+            this._repository.SaveOrder(order);
         }
     }
 }

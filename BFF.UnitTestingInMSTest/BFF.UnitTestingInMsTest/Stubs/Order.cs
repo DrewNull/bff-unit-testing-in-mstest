@@ -1,9 +1,7 @@
-﻿using System;
-
-namespace BFF.UnitTestingInMsTest.Stubs
+﻿namespace BFF.UnitTestingInMsTest.Stubs
 {
     public class Order
     {
-        public Guid Id { get; set; } 
+        public string OrderNumber { get; set; } 
     }
 }

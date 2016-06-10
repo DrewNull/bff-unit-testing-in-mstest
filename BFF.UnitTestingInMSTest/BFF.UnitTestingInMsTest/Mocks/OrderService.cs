@@ -9,8 +9,10 @@
             this._repository = repository;
         }
 
-        public void SaveOrder(Order order)
+        public void SubmitOrder(Order order)
         {
+            // do some other stuff
+
             this._repository.SaveOrder(order);
         }
     }
